@@ -341,13 +341,13 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <div class="cover-social-link">
 
 
-    <a href="mailto:xxx@xx.xx" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1243566178@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fa fa-envelope-open"></i>
     </a>
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=123123123" class="tooltipped" data-tooltip="QQ联系我: 123123123" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1243566178" class="tooltipped" data-tooltip="QQ联系我: 1243566178" data-position="top" data-delay="50">
         <i class="fa fa-qq"></i>
     </a>
 
@@ -412,6 +412,41 @@ $(function () {
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'false' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'false' === 'true',
+        listMaxHeight: '',
+        audio: JSON.parse('[{"name":"尚好的青春","artist":"孙燕姿","url":"http://www.ytmp3.cn/down/58421.mp3","cover":"http://p1.music.126.net/IpXZzvX4xgseWGfZhXHCyQ==/109951163115291601.jpg?param=130y130"},{"name":"初恋旧爱新欢","artist":"林力尧","url":"http://www.ytmp3.cn/down/39110.mp3","cover":"http://p1.music.126.net/IpXZzvX4xgseWGfZhXHCyQ==/109951163115291601.jpg?param=130y130"},{"name":"今天只做一件事","artist":"陈奕迅","url":"http://202.116.81.74/cache/6/05/music.126.net/7466bde91bc52f02a188acc23f0552e6/cfc51dba6faa0b6e4384b4331a1fa0b0.mp3","cover":"http://p1.music.126.net/IpXZzvX4xgseWGfZhXHCyQ==/109951163115291601.jpg?param=130y130"}]')
+    });
+});
+</script>
+                    
 
                     
 
@@ -432,6 +467,88 @@ $(function () {
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/08/10/pass/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="pass">
+                            
+                            <span class="card-title">pass</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                祝陈昭桦生日快乐！！！
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-user fa-fw"></i>
+                                Michael Don
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4 overflow-policy" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/08/10/“another”/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="“another”">
+                            
+                            <span class="card-title">“another”</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                This is a Test
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/hi/" class="post-category" target="_blank">
+                                    hi
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/测试/" target="_blank">
+                            <span class="chip bg-color">测试</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4 overflow-policy" data-aos="zoom-in">
                 <div class="card">
@@ -519,6 +636,9 @@ $(function () {
             <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
 
             
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">88</span>
+            
 
             
 			
@@ -540,13 +660,13 @@ $(function () {
         <div class="col s12 m4 l4 social-link social-statis">
 
 
-    <a href="mailto:xxx@xx.xx" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:1243566178@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fa fa-envelope-open"></i>
     </a>
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=123123123" class="tooltipped" data-tooltip="QQ联系我: 123123123" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1243566178" class="tooltipped" data-tooltip="QQ联系我: 1243566178" data-position="top" data-delay="50">
         <i class="fa fa-qq"></i>
     </a>
 

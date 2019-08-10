@@ -402,18 +402,11 @@ get是从服务器">
                     
                 </div>
             </div>
-            
+
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2019-08-10
-                </div>
-
-                <div class="post-author info-break-policy">
-                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
-                    
-                        Michael Don
-                    
                 </div>
 
                 
@@ -455,14 +448,17 @@ get是从服务器">
 <li><p>get方法测试</p>
 <ul>
 <li><p><strong>requests</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests </span><br><span class="line">r=requests.get(<span class="string">'https://www.baidu.com/'</span>)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests 
+r<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.baidu.com/'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span></code></pre>
 <p><strong>结果</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;!--STATUS OK--&gt;&lt;html&gt; &lt;head&gt;&lt;meta http-equiv=content-type content=text/html;charset=utf-8&gt;&lt;meta http-equiv=X-UA-Compatible content=IE=Edge&gt;&lt;meta content=always name=referrer&gt;&lt;link rel=stylesheet type=text/css href=https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/bdorz/baidu.min.css&gt;&lt;title&gt;ç¾åº¦ä¸ä¸ï¼ä½ å°±ç¥é&lt;/title&gt;&lt;/head&gt; &lt;body link=#0000cc&gt; &lt;div id=wrapper&gt; &lt;div id=head&gt; &lt;div class=head_wrapper&gt; &lt;div class=s_form&gt; &lt;div class=s_form_wrapper&gt; &lt;div id=lg&gt; &lt;img hidefocus=true src=//www.baidu.com/img/bd_logo1.png width=270 height=129&gt; &lt;/div&gt; &lt;form id=form name=f action=//www.baidu.com/s class=fm&gt; &lt;input type=hidden name=bdorz_come value=1&gt; &lt;input type=hidden name=ie value=utf-8&gt; &lt;input type=hidden name=f value=8&gt; &lt;input type=hidden name=rsv_bp value=1&gt; &lt;input type=hidden name=rsv_idx value=1&gt; &lt;input type=hidden name=tn value=baidu&gt;&lt;span class=&quot;bg s_ipt_wr&quot;&gt;&lt;input id=kw name=wd class=s_ipt value maxlength=255 autocomplete=off autofocus=autofocus&gt;&lt;/span&gt;&lt;span class=&quot;bg s_btn_wr&quot;&gt;&lt;input type=submit id=su value=ç¾åº¦ä¸ä¸ class=&quot;bg s_btn&quot; autofocus&gt;&lt;/span&gt; &lt;/form&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=u1&gt; &lt;a href=http://news.baidu.com name=tj_trnews class=mnav&gt;æ°é»&lt;/a&gt; &lt;a href=https://www.hao123.com name=tj_trhao123 class=mnav&gt;hao123&lt;/a&gt; &lt;a href=http://map.baidu.com name=tj_trmap class=mnav&gt;å°å¾&lt;/a&gt; &lt;a href=http://v.baidu.com name=tj_trvideo class=mnav&gt;è§é¢&lt;/a&gt; &lt;a href=http://tieba.baidu.com name=tj_trtieba class=mnav&gt;è´´å§&lt;/a&gt; &lt;noscript&gt; &lt;a href=http://www.baidu.com/bdorz/login.gif?login&amp;amp;tpl=mn&amp;amp;u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 name=tj_login class=lb&gt;ç»å½&lt;/a&gt; &lt;/noscript&gt; &lt;script&gt;document.write(&apos;&lt;a href=&quot;http://www.baidu.com/bdorz/login.gif?login&amp;tpl=mn&amp;u=&apos;+ encodeURIComponent(window.location.href+ (window.location.search === &quot;&quot; ? &quot;?&quot; : &quot;&amp;&quot;)+ &quot;bdorz_come=1&quot;)+ &apos;&quot; name=&quot;tj_login&quot; class=&quot;lb&quot;&gt;ç»å½&lt;/a&gt;&apos;);</span><br><span class="line">                &lt;/script&gt; &lt;a href=//www.baidu.com/more/ name=tj_briicon class=bri style=&quot;display: block;&quot;&gt;æ´å¤äº§å&lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=ftCon&gt; &lt;div id=ftConw&gt; &lt;p id=lh&gt; &lt;a href=http://home.baidu.com&gt;å³äºç¾åº¦&lt;/a&gt; &lt;a href=http://ir.baidu.com&gt;About Baidu&lt;/a&gt; &lt;/p&gt; &lt;p id=cp&gt;&amp;copy;2017&amp;nbsp;Baidu&amp;nbsp;&lt;a href=http://www.baidu.com/duty/&gt;ä½¿ç¨ç¾åº¦åå¿è¯»&lt;/a&gt;&amp;nbsp; &lt;a href=http://jianyi.baidu.com/ class=cp-feedback&gt;æè§åé¦&lt;/a&gt;&amp;nbsp;äº¬ICPè¯030173å·&amp;nbsp; &lt;img src=//www.baidu.com/img/gs.gif&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;!--STATUS OK--&gt;&lt;html&gt; &lt;head&gt;&lt;meta http-equiv=content-type content=text/html;charset=utf-8&gt;&lt;meta http-equiv=X-UA-Compatible content=IE=Edge&gt;&lt;meta content=always name=referrer&gt;&lt;link rel=stylesheet type=text/css href=https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/bdorz/baidu.min.css&gt;&lt;title&gt;ç¾åº¦ä¸ä¸ï¼ä½ å°±ç¥é&lt;/title&gt;&lt;/head&gt; &lt;body link=#0000cc&gt; &lt;div id=wrapper&gt; &lt;div id=head&gt; &lt;div class=head_wrapper&gt; &lt;div class=s_form&gt; &lt;div class=s_form_wrapper&gt; &lt;div id=lg&gt; &lt;img hidefocus=true src=//www.baidu.com/img/bd_logo1.png width=270 height=129&gt; &lt;/div&gt; &lt;form id=form name=f action=//www.baidu.com/s class=fm&gt; &lt;input type=hidden name=bdorz_come value=1&gt; &lt;input type=hidden name=ie value=utf-8&gt; &lt;input type=hidden name=f value=8&gt; &lt;input type=hidden name=rsv_bp value=1&gt; &lt;input type=hidden name=rsv_idx value=1&gt; &lt;input type=hidden name=tn value=baidu&gt;&lt;span class=&quot;bg s_ipt_wr&quot;&gt;&lt;input id=kw name=wd class=s_ipt value maxlength=255 autocomplete=off autofocus=autofocus&gt;&lt;/span&gt;&lt;span class=&quot;bg s_btn_wr&quot;&gt;&lt;input type=submit id=su value=ç¾åº¦ä¸ä¸ class=&quot;bg s_btn&quot; autofocus&gt;&lt;/span&gt; &lt;/form&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=u1&gt; &lt;a href=http://news.baidu.com name=tj_trnews class=mnav&gt;æ°é»&lt;/a&gt; &lt;a href=https://www.hao123.com name=tj_trhao123 class=mnav&gt;hao123&lt;/a&gt; &lt;a href=http://map.baidu.com name=tj_trmap class=mnav&gt;å°å¾&lt;/a&gt; &lt;a href=http://v.baidu.com name=tj_trvideo class=mnav&gt;è§é¢&lt;/a&gt; &lt;a href=http://tieba.baidu.com name=tj_trtieba class=mnav&gt;è´´å§&lt;/a&gt; &lt;noscript&gt; &lt;a href=http://www.baidu.com/bdorz/login.gif?login&amp;amp;tpl=mn&amp;amp;u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 name=tj_login class=lb&gt;ç»å½&lt;/a&gt; &lt;/noscript&gt; &lt;script&gt;document.write(&#39;&lt;a href=&quot;http://www.baidu.com/bdorz/login.gif?login&amp;tpl=mn&amp;u=&#39;+ encodeURIComponent(window.location.href+ (window.location.search === &quot;&quot; ? &quot;?&quot; : &quot;&amp;&quot;)+ &quot;bdorz_come=1&quot;)+ &#39;&quot; name=&quot;tj_login&quot; class=&quot;lb&quot;&gt;ç»å½&lt;/a&gt;&#39;);
+                &lt;/script&gt; &lt;a href=//www.baidu.com/more/ name=tj_briicon class=bri style=&quot;display: block;&quot;&gt;æ´å¤äº§å&lt;/a&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div id=ftCon&gt; &lt;div id=ftConw&gt; &lt;p id=lh&gt; &lt;a href=http://home.baidu.com&gt;å³äºç¾åº¦&lt;/a&gt; &lt;a href=http://ir.baidu.com&gt;About Baidu&lt;/a&gt; &lt;/p&gt; &lt;p id=cp&gt;&amp;copy;2017&amp;nbsp;Baidu&amp;nbsp;&lt;a href=http://www.baidu.com/duty/&gt;ä½¿ç¨ç¾åº¦åå¿è¯»&lt;/a&gt;&amp;nbsp; &lt;a href=http://jianyi.baidu.com/ class=cp-feedback&gt;æè§åé¦&lt;/a&gt;&amp;nbsp;äº¬ICPè¯030173å·&amp;nbsp; &lt;img src=//www.baidu.com/img/gs.gif&gt; &lt;/p&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</code></pre></li>
 <li><p><strong>urllib</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> request</span><br><span class="line">response=urllib.request.urlopen(<span class="string">'https://www.baidu.com/'</span>)</span><br><span class="line">print(response.read().decode(<span class="string">'utf-8'</span>))</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> urllib <span class="token keyword">import</span> request
+response<span class="token operator">=</span>urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">'https://www.baidu.com/'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <p><strong>结果</strong></p>
 </li>
 </ul>
@@ -479,14 +475,34 @@ get是从服务器">
 <p>请求头用来说明服务器要使用的附加信息，比较重要的信息有cookie，referer，user-Agent等</p>
 </li>
 <li><p><strong>怎么添加请求头</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"> </span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) \</span></span><br><span class="line"><span class="string">AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'</span>,</span><br><span class="line">    <span class="string">'Token'</span>: <span class="string">'123456'</span></span><br><span class="line">&#125;</span><br><span class="line">r = requests.get(<span class="string">'http://httpbin.org/get?name=hangge'</span>, headers=headers)</span><br><span class="line">print(r.text)</span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;args&quot;: &#123;</span><br><span class="line">    &quot;name&quot;: &quot;hangge&quot;</span><br><span class="line">  &#125;, </span><br><span class="line">  &quot;headers&quot;: &#123;</span><br><span class="line">    &quot;Accept&quot;: &quot;*/*&quot;, </span><br><span class="line">    &quot;Accept-Encoding&quot;: &quot;gzip, deflate&quot;, </span><br><span class="line">    &quot;Host&quot;: &quot;httpbin.org&quot;, </span><br><span class="line">    &quot;Token&quot;: &quot;123456&quot;, </span><br><span class="line">    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36&quot;</span><br><span class="line">  &#125;, </span><br><span class="line">  &quot;origin&quot;: &quot;120.236.174.141, 120.236.174.141&quot;, </span><br><span class="line">  &quot;url&quot;: &quot;https://httpbin.org/get?name=hangge&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
+headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'User-Agent'</span><span class="token punctuation">:</span> 'Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Macintosh<span class="token punctuation">;</span> Intel Mac OS X 10_14_2<span class="token punctuation">)</span> \
+AppleWebKit<span class="token operator">/</span><span class="token number">537.36</span> <span class="token punctuation">(</span>KHTML<span class="token punctuation">,</span> like Gecko<span class="token punctuation">)</span> Chrome<span class="token operator">/</span><span class="token number">73.0</span><span class="token punctuation">.</span><span class="token number">3683.86</span> Safari<span class="token operator">/</span><span class="token number">537.36</span>'<span class="token punctuation">,</span>
+    <span class="token string">'Token'</span><span class="token punctuation">:</span> <span class="token string">'123456'</span>
+<span class="token punctuation">}</span>
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http://httpbin.org/get?name=hangge'</span><span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span></code></pre>
+<pre><code>{
+  &quot;args&quot;: {
+    &quot;name&quot;: &quot;hangge&quot;
+  }, 
+  &quot;headers&quot;: {
+    &quot;Accept&quot;: &quot;*/*&quot;, 
+    &quot;Accept-Encoding&quot;: &quot;gzip, deflate&quot;, 
+    &quot;Host&quot;: &quot;httpbin.org&quot;, 
+    &quot;Token&quot;: &quot;123456&quot;, 
+    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36&quot;
+  }, 
+  &quot;origin&quot;: &quot;120.236.174.141, 120.236.174.141&quot;, 
+  &quot;url&quot;: &quot;https://httpbin.org/get?name=hangge&quot;
+}</code></pre></li>
 </ol>
 <h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="1-正则表达式"><a href="#1-正则表达式" class="headerlink" title="1. 正则表达式"></a>1. 正则表达式</h3><ol>
-<li><h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = "abc123def";</span><br><span class="line">var patt1=/[0-9]+/</span><br><span class="line">document.write(str.match(patt1));</span><br></pre></td></tr></table></figure>
+<li><h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><pre class=" language-html"><code class="language-html">var str = "abc123def";
+var patt1=/[0-9]+/
+document.write(str.match(patt1));</code></pre>
 </li>
 <li><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>正则表达式(regular expression)描述了一种字符串匹配的模式（pattern），由普通字符（例如字符 a 到 z）以及特殊字符（称为”元字符”）组成，可以用来检查一个串是否含有某种子串、将匹配的子串替换或者从某个串中取出符合某个条件的子串等。</p>
 <ul>
@@ -688,14 +704,17 @@ get是从服务器">
 <td align="left">标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等。参见：<a href="https://www.runoob.com/python/python-reg-expressions.html#flags" target="_blank" rel="noopener">正则表达式修饰符 - 可选标志</a></td>
 </tr>
 </tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(0, 3)</span><br><span class="line">None</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code>(0, 3)
+None</code></pre></li>
 <li><p>re.search</p>
 <p>re.search 扫描整个字符串并返回第一个成功的匹配。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">print(re.search(<span class="string">'www'</span>, <span class="string">'www.runoob.com'</span>).span())  <span class="comment"># 在起始位置匹配</span></span><br><span class="line">print(re.search(<span class="string">'com'</span>, <span class="string">'www.runoob.com'</span>).span())         <span class="comment"># 不在起始位置匹配</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(0, 3)</span><br><span class="line">(11, 14)</span><br></pre></td></tr></table></figure>
-</li>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> re
+<span class="token keyword">print</span><span class="token punctuation">(</span>re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">'www'</span><span class="token punctuation">,</span> <span class="token string">'www.runoob.com'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>span<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 在起始位置匹配</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">'com'</span><span class="token punctuation">,</span> <span class="token string">'www.runoob.com'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>span<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token comment" spellcheck="true"># 不在起始位置匹配</span>
+</code></pre>
+<pre><code>(0, 3)
+(11, 14)
+</code></pre></li>
 <li><p>两者的区别</p>
 <p>re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配。</p>
 </li>
@@ -784,27 +803,129 @@ get是从服务器">
 </ul>
 </li>
 <li><p>爬去网页的通用代码框架</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_html</span><span class="params">(url, params)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url, params)</span><br><span class="line">        r.raise_for_status()</span><br><span class="line">        r.encoding = r.apparent_encoding</span><br><span class="line">        <span class="keyword">return</span> r.text</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"raise exception"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    url = <span class="string">"http://www.baidu.com"</span></span><br><span class="line">    print(get_html(url))</span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+
+</code></pre>
 </li>
+</ul>
+</li>
+</ol>
+<pre><code> def get_html(url, params):
+     try:
+         r = requests.get(url, params)
+         r.raise_for_status()
+         r.encoding = r.apparent_encoding
+         return r.text
+     except:
+         return &quot;raise exception&quot;
+
+
+ if __name__ == &quot;__main__&quot;:
+     url = &quot;http://www.baidu.com&quot;
+     print(get_html(url))
+
+ ```</code></pre><ul>
 <li><p>zip函数</p>
 <p><strong>zip()</strong> 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表。</p>
 <p>如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同，利用 * 号操作符，可以将元组解压为列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zipped = zip(a,b)     <span class="comment"># 打包为元组的列表</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zip(a,c)              <span class="comment"># 元素个数与最短的列表一致</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">4</span>), (<span class="number">2</span>, <span class="number">5</span>), (<span class="number">3</span>, <span class="number">6</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>zip(*zipped)          <span class="comment"># 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式</span></span><br><span class="line">[(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>), (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)]</span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token operator">>></span><span class="token operator">></span> b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span>
+<span class="token operator">>></span><span class="token operator">></span> c <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span>
+<span class="token operator">>></span><span class="token operator">></span> zipped <span class="token operator">=</span> zip<span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># 打包为元组的列表</span>
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token operator">>></span><span class="token operator">></span> zip<span class="token punctuation">(</span>a<span class="token punctuation">,</span>c<span class="token punctuation">)</span>              <span class="token comment" spellcheck="true"># 元素个数与最短的列表一致</span>
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token operator">>></span><span class="token operator">></span> zip<span class="token punctuation">(</span><span class="token operator">*</span>zipped<span class="token punctuation">)</span>          <span class="token comment" spellcheck="true"># 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式</span>
+<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+</code></pre>
 </li>
 <li><p>re.S参数</p>
 <p>如果不使用re.S参数，则只在每一行内进行匹配，如果一行没有，就换下一行重新开始，不会跨行。而使用re.S参数以后，正则表达式会将这个字符串作为一个整体，将“\n”当做一个普通的字符加入到这个字符串中，在整体中进行匹配。</p>
 </li>
 </ul>
-</li>
-<li><h4 id="方法一：不适用re-compile"><a href="#方法一：不适用re-compile" class="headerlink" title="方法一：不适用re.compile"></a>方法一：不适用re.compile</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">openurl</span><span class="params">(url)</span>:</span></span><br><span class="line">    user_agent = <span class="string">'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'</span></span><br><span class="line">    headers = &#123;<span class="string">'User-Agent'</span>: user_agent&#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url, headers = headers, timeout = <span class="number">20</span>)</span><br><span class="line">        r.raise_for_status()</span><br><span class="line">        r.encoding = r.apparent_encoding</span><br><span class="line">        <span class="keyword">return</span> r.text</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        print(<span class="string">'无法访问网页'</span> + url)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    douban_250 = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,<span class="number">8</span>):</span><br><span class="line">        url = <span class="string">'https://movie.douban.com/top250?start='</span></span><br><span class="line">        url += str(i * <span class="number">25</span>)</span><br><span class="line">        text = openurl(url)</span><br><span class="line">        ranks = re.findall(<span class="string">'&lt;em class=""&gt;(.*)&lt;/em&gt;'</span>, text)</span><br><span class="line">        movie_names = re.findall(<span class="string">'&lt;img width="100" alt="(.*)" src="https'</span>, text)</span><br><span class="line">        counties = re.findall(<span class="string">'&amp;nbsp;/&amp;nbsp;(.*)&amp;nbsp;/&amp;nbsp;'</span>,text)</span><br><span class="line">        years=re.findall(<span class="string">'(\d&#123;4&#125;.*?)&amp;nbsp;'</span>,text)</span><br><span class="line">        directors = re.findall(<span class="string">'导演: (.*?)&amp;nbsp;'</span>, text)</span><br><span class="line"></span><br><span class="line">        z = zip(ranks, movie_names, counties, years,directors)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> z:</span><br><span class="line">            douban_250.append(i)</span><br><span class="line"><span class="comment">#            </span></span><br><span class="line"><span class="comment">#208有问题,导演那一行太长看不到nbsp，单独匹配            </span></span><br><span class="line">    i=<span class="number">8</span></span><br><span class="line">    url = <span class="string">'https://movie.douban.com/top250?start='</span></span><br><span class="line">    url += str(i * <span class="number">25</span>)</span><br><span class="line">    text = openurl(url)</span><br><span class="line">    ranks = re.findall(<span class="string">'&lt;em class=""&gt;(.*)&lt;/em&gt;'</span>, text)</span><br><span class="line">    movie_names = re.findall(<span class="string">'&lt;img width="100" alt="(.*)" src="https'</span>, text)</span><br><span class="line">    counties = re.findall(<span class="string">'&amp;nbsp;/&amp;nbsp;(.*)&amp;nbsp;/&amp;nbsp;'</span>,text)</span><br><span class="line">    years=re.findall(<span class="string">'(\d&#123;4&#125;.*?)&amp;nbsp;'</span>,text)</span><br><span class="line">    directors = re.findall(<span class="string">'导演: (.*?)&amp;nbsp;|导演: (.*)'</span>, text)</span><br><span class="line">    z = zip(ranks, movie_names, counties, years,directors)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> z:</span><br><span class="line">        douban_250.append(i)</span><br><span class="line"><span class="comment">#因为只剩下最后一页，也单独匹配   </span></span><br><span class="line">    i=<span class="number">9</span></span><br><span class="line">    url = <span class="string">'https://movie.douban.com/top250?start='</span></span><br><span class="line">    url += str(i * <span class="number">25</span>)</span><br><span class="line">    text = openurl(url)</span><br><span class="line">    ranks = re.findall(<span class="string">'&lt;em class=""&gt;(.*)&lt;/em&gt;'</span>, text)</span><br><span class="line">    movie_names = re.findall(<span class="string">'&lt;img width="100" alt="(.*)" src="https'</span>, text)</span><br><span class="line">    counties = re.findall(<span class="string">'&amp;nbsp;/&amp;nbsp;(.*)&amp;nbsp;/&amp;nbsp;'</span>,text)</span><br><span class="line">    years=re.findall(<span class="string">'(\d&#123;4&#125;.*?)&amp;nbsp;'</span>,text)</span><br><span class="line">    directors = re.findall(<span class="string">'导演: (.*?)&amp;nbsp;'</span>, text)</span><br><span class="line"></span><br><span class="line">    z = zip(ranks, movie_names, counties, years,directors)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> z:</span><br><span class="line">        douban_250.append(i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'Top250.txt'</span>, <span class="string">'w'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> douban_250:</span><br><span class="line">            f.writelines(str(i) + <span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="方法二：使用re-compile"><a href="#方法二：使用re-compile" class="headerlink" title="方法二：使用re.compile()"></a>方法二：使用re.compile()</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#模仿《网络爬虫开发实战》中爬猫眼电影排行榜的方法</span></span><br><span class="line"><span class="comment">#爬 排名；名称；导演；国家；年份</span></span><br><span class="line"><span class="comment">#爬到的Top208导演信息也有和方法一同样的问题，这里暂时不纠结了</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> RequestException</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_one_page</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        headers=&#123;<span class="string">'User-Agent'</span>:<span class="string">'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'</span>&#125;</span><br><span class="line">        response=requests.get(url,headers=headers)</span><br><span class="line">        <span class="keyword">if</span> response.status_code==<span class="number">200</span>:</span><br><span class="line">            <span class="keyword">return</span> response.text</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> RequestException:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(offset)</span>:</span></span><br><span class="line">    url=<span class="string">'https://movie.douban.com/top250?start='</span>+str(offset)</span><br><span class="line">    html=get_one_page(url)</span><br><span class="line"><span class="comment">#    print(html)</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> parse_one_page(html):</span><br><span class="line">        print(item)</span><br><span class="line">        write_to_file(item)</span><br><span class="line">        </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_one_page</span><span class="params">(html)</span>:</span></span><br><span class="line">    pattern=re.compile(<span class="string">'&lt;li&gt;.*?&lt;em class=""&gt;(.*?)&lt;/em&gt;.*?"title"&gt;(.*?)&lt;/span&gt;.*?&lt;p class=""&gt;\n(.*?)&amp;nbsp;.*?(\d&#123;4&#125;.*?)&amp;nbsp;/&amp;nbsp;(.*?)&amp;nbsp;/&amp;nbsp;'</span>,re.S)</span><br><span class="line">    items=re.findall(pattern,html)</span><br><span class="line">    <span class="keyword">for</span>  item <span class="keyword">in</span> items:</span><br><span class="line">        <span class="keyword">yield</span>&#123;</span><br><span class="line">                <span class="string">'index'</span>:item[<span class="number">0</span>],</span><br><span class="line">                <span class="string">'title'</span>:item[<span class="number">1</span>],</span><br><span class="line">                <span class="string">'director'</span>:item[<span class="number">2</span>].strip()[<span class="number">3</span>:] ,</span><br><span class="line">                <span class="string">'years'</span>:item[<span class="number">3</span>],</span><br><span class="line">                <span class="string">'country'</span>:item[<span class="number">4</span>]                </span><br><span class="line">                &#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">write_to_file</span><span class="params">(content)</span>:</span></span><br><span class="line">     <span class="comment">#以json格式写进去</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'result.txt'</span>, <span class="string">'a'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(json.dumps(content,ensure_ascii=<span class="literal">False</span>)+<span class="string">'\n'</span>)</span><br><span class="line">        </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">        main(offset=i*<span class="number">25</span>)</span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><h4 id="方法一：不适用re-compile"><a href="#方法一：不适用re-compile" class="headerlink" title="方法一：不适用re.compile"></a>方法一：不适用re.compile</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> re
 
-
-
+</code></pre>
 </li>
 </ol>
-<ol start="4">
+<p>   def openurl(url):<br>       user_agent = ‘Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)’<br>       headers = {‘User-Agent’: user_agent}<br>       try:<br>           r = requests.get(url, headers = headers, timeout = 20)<br>           r.raise_for_status()<br>           r.encoding = r.apparent_encoding<br>           return r.text<br>       except:<br>           print(‘无法访问网页’ + url)</p>
+<p>   if <strong>name</strong> == ‘<strong>main</strong>‘:<br>       douban_250 = []</p>
+<pre><code>   for i in range(0,8):
+       url = &#39;https://movie.douban.com/top250?start=&#39;
+       url += str(i * 25)
+       text = openurl(url)
+       ranks = re.findall(&#39;&lt;em class=&quot;&quot;&gt;(.*)&lt;/em&gt;&#39;, text)
+       movie_names = re.findall(&#39;&lt;img width=&quot;100&quot; alt=&quot;(.*)&quot; src=&quot;https&#39;, text)
+       counties = re.findall(&#39;&amp;nbsp;/&amp;nbsp;(.*)&amp;nbsp;/&amp;nbsp;&#39;,text)
+       years=re.findall(&#39;(\d{4}.*?)&amp;nbsp;&#39;,text)
+       directors = re.findall(&#39;导演: (.*?)&amp;nbsp;&#39;, text)
+
+       z = zip(ranks, movie_names, counties, years,directors)
+       for i in z:
+           douban_250.append(i)</code></pre><h1 id><a href="#" class="headerlink" title=" "></a> </h1><p>   #208有问题,导演那一行太长看不到nbsp，单独匹配<br>       i=8<br>       url = ‘<a href="https://movie.douban.com/top250?start=&#39;" target="_blank" rel="noopener">https://movie.douban.com/top250?start=&#39;</a><br>       url += str(i <em> 25)<br>       text = openurl(url)<br>       ranks = re.findall(‘<em class>(.</em>)</em>‘, text)<br>       movie_names = re.findall(‘&lt;img width=”100” alt=”(.<em>)” src=”https’, text)<br>       counties = re.findall(‘&nbsp;/&nbsp;(.</em>)&nbsp;/&nbsp;’,text)<br>       years=re.findall(‘(\d{4}.<em>?)&nbsp;’,text)<br>       directors = re.findall(‘导演: (.</em>?)&nbsp;|导演: (.*)’, text)<br>       z = zip(ranks, movie_names, counties, years,directors)<br>       for i in z:<br>           douban_250.append(i)</p>
+<p>   #因为只剩下最后一页，也单独匹配<br>       i=9<br>       url = ‘<a href="https://movie.douban.com/top250?start=&#39;" target="_blank" rel="noopener">https://movie.douban.com/top250?start=&#39;</a><br>       url += str(i <em> 25)<br>       text = openurl(url)<br>       ranks = re.findall(‘<em class>(.</em>)</em>‘, text)<br>       movie_names = re.findall(‘&lt;img width=”100” alt=”(.<em>)” src=”https’, text)<br>       counties = re.findall(‘&nbsp;/&nbsp;(.</em>)&nbsp;/&nbsp;’,text)<br>       years=re.findall(‘(\d{4}.<em>?)&nbsp;’,text)<br>       directors = re.findall(‘导演: (.</em>?)&nbsp;’, text)</p>
+<pre><code>   z = zip(ranks, movie_names, counties, years,directors)
+   for i in z:
+       douban_250.append(i)
+
+
+
+   with open(&#39;Top250.txt&#39;, &#39;w&#39;,encoding=&#39;utf-8&#39;) as f:
+       for i in douban_250:
+           f.writelines(str(i) + &#39;\n&#39;)</code></pre><pre><code>
+3. #### 方法二：使用re.compile()
+
+   ```python
+   #模仿《网络爬虫开发实战》中爬猫眼电影排行榜的方法
+   #爬 排名；名称；导演；国家；年份
+   #爬到的Top208导演信息也有和方法一同样的问题，这里暂时不纠结了
+   import requests
+   import re
+   import json
+   from requests.exceptions import RequestException
+   import time
+   def get_one_page(url):
+       try:
+           headers={&#39;User-Agent&#39;:&#39;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&#39;}
+           response=requests.get(url,headers=headers)
+           if response.status_code==200:
+               return response.text
+           return None
+       except RequestException:
+           return None
+
+   def main(offset):
+       url=&#39;https://movie.douban.com/top250?start=&#39;+str(offset)
+       html=get_one_page(url)
+   #    print(html)
+       for item in parse_one_page(html):
+           print(item)
+           write_to_file(item)
+
+
+   def parse_one_page(html):
+       pattern=re.compile(&#39;&lt;li&gt;.*?&lt;em class=&quot;&quot;&gt;(.*?)&lt;/em&gt;.*?&quot;title&quot;&gt;(.*?)&lt;/span&gt;.*?&lt;p class=&quot;&quot;&gt;\n(.*?)&amp;nbsp;.*?(\d{4}.*?)&amp;nbsp;/&amp;nbsp;(.*?)&amp;nbsp;/&amp;nbsp;&#39;,re.S)
+       items=re.findall(pattern,html)
+       for  item in items:
+           yield{
+                   &#39;index&#39;:item[0],
+                   &#39;title&#39;:item[1],
+                   &#39;director&#39;:item[2].strip()[3:] ,
+                   &#39;years&#39;:item[3],
+                   &#39;country&#39;:item[4]                
+                   }
+   def write_to_file(content):
+        #以json格式写进去
+       with open(&#39;result.txt&#39;, &#39;a&#39;,encoding=&#39;utf-8&#39;) as f:
+           f.write(json.dumps(content,ensure_ascii=False)+&#39;\n&#39;)
+
+   if __name__ == &#39;__main__&#39;:
+       for i in range(10):
+           main(offset=i*25)
+           time.sleep(0.1)
+</code></pre><ol start="4">
 <li><h4 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h4><ul>
 <li><p>写入文件时报错</p>
 <p>出错的原因是网页及python的编码都是utf-8，在写入文件时Windows默认转码成gbk，遇到某些gbk不支持的字符就会报错。在打开文件时就声明编码方式为utf-8就能避免这个错误。</p>

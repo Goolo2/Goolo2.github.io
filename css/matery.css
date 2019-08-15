@@ -1,4 +1,4 @@
-/*全局基础样式*/
+ /*全局基础样式*/
 /*小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 601px) {
     .container {
@@ -163,9 +163,10 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #30cfd0 50%, #330867 100%);
+    background-image: linear-gradient(to right, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
     opacity: 0.7;
 }
+
 
 .text-color {
     color: #0f9d58 !important;
@@ -406,9 +407,9 @@ header .go-back i {
 }
 
 @-webkit-keyframes rainbow {
-    0%,
-    100% {
+    /*0%, 100% {
         background: rgba(156, 39, 176, 0.75);
+        background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
         background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
@@ -442,15 +443,18 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    }*/
 }
-
+/*主要用这个控制首页的半透明层颜色变化
+    0%和100%要一样才能循环
+*/
 @keyframes rainbow {
-    0%, 100% {
+    /*0%, 100% {
         background: rgba(156, 39, 176, 0.75);
         background: linear-gradient(45deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(156, 39, 176, 0.75) 0%, rgba(156, 39, 176, 0.65) 100%);
+        background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
         opacity: 0.5;
     }
     16% {
@@ -480,14 +484,28 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 112, 66, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(255, 160, 0, 0.75) 0%, rgba(255, 160, 0, 0.65) 100%);
         opacity: 0.5;
+    }*/
+    0%,100% {
+        background: rgba(126, 207, 192, 0.75);
+        opacity: 0.4;
     }
-    80% {
-        background: rgba(233, 30, 99, 0.75);
-        background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-        background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-        background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-        opacity: 0.5;
+    16% {
+        background: rgba(242, 227, 201, 0.75);
+        opacity: 0.4;
     }
+    32% {
+        background: rgba(236, 143, 106, 0.75);
+        opacity: 0.4;
+    }
+    48% {
+        background: rgba(239, 75, 75, 0.75);
+        opacity: 0.4;
+    }
+    64% {
+        background: rgba(138, 198, 209, 0.75);
+        opacity: 0.4;
+    }
+    
 }
 
 .carousel .indicators {

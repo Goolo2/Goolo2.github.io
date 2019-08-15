@@ -263,7 +263,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    Goolo&#39;s Blog
+                    Goolo&#39;s Studio
                 
             </div>
 
@@ -294,13 +294,105 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             </div>
             <div class="tag-chips">
                 
-                你目前还没有对文章进行分类.
+                
+                
+                <a href="/categories/Spider/" title="Spider: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">Spider
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/博客的坑/" title="博客的坑: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">博客的坑
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/庆生专辑/" title="庆生专辑: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">庆生专辑
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/DL/" title="DL: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">DL
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
+    
+    <style type="text/css">
+    #category-radar {
+        width: 100%;
+        height: 360px;
+    }
+</style>
+
+<div class="container" data-aos="fade-up">
+    <div class="card">
+        <div id="category-radar" class="card-content"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+    let radarChart = echarts.init(document.getElementById('category-radar'));
+
+    
+
+    let option = {
+        title: {
+            left: 'center',
+            text: '文章分类雷达图',
+            textStyle: {
+                fontWeight: 500,
+                fontSize: 22
+            }
+        },
+        tooltip: {},
+        radar: {
+            name: {
+                textStyle: {
+                    color: '#3C4858'
+                }
+            },
+            indicator: [{"name":"Spider","max":2},{"name":"博客的坑","max":2},{"name":"庆生专辑","max":2},{"name":"DL","max":2}],
+            nameGap: 5,
+            center: ['50%','55%'],
+            radius: '66%'
+        },
+        series: [{
+            type: 'radar',
+            color: ['#3ecf8e'],
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data : [
+                {
+                    value : [1,1,1,1],
+                    name : '文章分类数量'
+                }
+            ]
+        }]
+    };
+
+    radarChart.setOption(option);
+</script>
     
 
 </main>
@@ -312,7 +404,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
           
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">4.2k</span>
+                <span class="white-color">7.1k</span>
             
               
             <br>

@@ -1763,7 +1763,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3ccb17;
+  background: #1c53c1;
 }
 .feed-link,
 .chat {
@@ -2721,11 +2721,8 @@ hr {
 .sidebar a {
   color: #fff;
 }
-blockquote.question {
-  color: #555;
-  border-left: 4px solid #1098ad;
-  background-color: #e3f2fd;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  margin-bottom: 20px;
+.post-block {
+  padding: 36px;
+  margin: -36px;
+  background-color: #d7b98e;
 }

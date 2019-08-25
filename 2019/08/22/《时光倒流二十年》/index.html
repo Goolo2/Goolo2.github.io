@@ -17,16 +17,6 @@
 <html class="theme-next mist use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
-<script>
-    (function(){
-        if(''){
-            if (prompt('你的名字？') !== ''){
-                alert('密码错误');
-                history.back();
-            }
-        }
-    })();
-</script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -469,14 +459,19 @@
       
 
       
-        <p>童年你與誰渡過 聖詩班中唱的歌<br>再哼一哼可以麼<br>當時誰與你排著坐 白色恤衫灰褲子<br>再穿一穿可以麼</p>
-<p>遺憾我當時年紀不可親手擁抱你欣賞<br>童年便相識 餘下日子多閃幾倍光<br>誰讓我倒流時光一起親身跟你去分享<br>能留下印象 閱覽你家中每道牆<br>拿著你歌書 與你合唱</p>
-<p>從前你與誰路過 逛的公園有幾多<br>再走一走可以麼<br>當時誰對你凝望過 是否真的比我多<br>再演一演可以麼</p>
-<p>遺憾我當時年紀不可親手擁抱你欣賞<br>童年便相識 餘下日子多閃幾倍光<br>誰讓我倒流時光一起親身跟你去分享<br>遺憾印象 沒有你家中那面牆<br>拿著你相簿</p>
-<p>從前拍過的相<br>多麼妒忌你昨日同過的窗<br>早些看著你美麗模樣<br>對你天真的讚賞</p>
-<p>遺憾我當時年紀不可親手擁抱你欣賞<br>童年便相識 餘下日子多閃幾倍光<br>誰讓我倒流時光一起親身跟你去分享<br>遺憾印象 沒有你家中那面牆<br>拿著你相簿</p>
-<p>從頭細看 你六歲當天 已是我偶像</p>
-
+        <div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog.">
+    <label for="pass">Please enter the password to read the blog.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -586,7 +581,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

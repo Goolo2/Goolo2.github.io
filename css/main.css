@@ -154,7 +154,7 @@ template {
 body {
   position: relative;
   font-family: 'EB Garamond', "Noto Serif SC", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 2;
   color: #555;
   background: #dac9a6;
@@ -166,7 +166,7 @@ body {
 }
 @media (min-width: 1200px) {
   body {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 h1,
@@ -1229,7 +1229,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1763,7 +1763,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1c53c1;
+  background: #ffc2be;
 }
 .feed-link,
 .chat {
@@ -2124,6 +2124,10 @@ pre .javascript .function {
   transform: translate(-50%, -50%);
   color: #ccc;
 }
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 .page-archive .archive-page-counter {
   position: relative;
   top: 3px;
@@ -2334,7 +2338,7 @@ ul.breadcrumb {
   margin: 1em 0;
   padding: 0 2em;
   text-align: center;
-  font-size: 10px;
+  font-size: 13px;
 }
 ul.breadcrumb li {
   display: inline;
@@ -2598,11 +2602,11 @@ hr {
 }
 @media (max-width: 767px) {
   .posts-expand .post-body {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 .posts-expand .post-body img {
-  margin: 0;
+  margin: 0 auto;
 }
 .posts-expand .post-tags {
   text-align: left;
@@ -2624,7 +2628,7 @@ hr {
 }
 .post-button a {
   padding: 0;
-  font-size: 12px;
+  font-size: 15px;
   background: none;
   border: none;
   border-bottom: 2px solid #666;
@@ -2632,12 +2636,12 @@ hr {
 }
 @media (max-width: 767px) {
   .post-button a {
-    font-size: 10px;
+    font-size: 13px;
   }
 }
 @media (min-width: 1200px) {
   .post-button a {
-    font-size: 14px;
+    font-size: 17px;
   }
 }
 .post-button a:hover {
@@ -2725,4 +2729,29 @@ hr {
   padding: 36px;
   margin: -36px;
   background-color: #d7b98e;
+}
+.footer {
+  margin-top: 80px;
+  padding: 10px 0;
+  background: #dcb979;
+  color: #666;
+}
+.footer-inner {
+  margin: 0 auto;
+  text-align: center;
+}
+.img-caption {
+  font-style: normal;
+  margin: 0 0 0.7em;
+  font-size: 90%;
+  color: #555;
+  display: block;
+  text-align: center;
+  text-indent: 0;
+  font-family: STKaiti, serif;
+}
+.posts-expand .post-title {
+  position: relative;
+  font-size: 26px;
+  font-weight: bold;
 }

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="使用神经网络识别手写数字">
+<meta name="keywords" content="神经网络,基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神经网络基础">
+<meta property="og:url" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/index.html">
+<meta property="og:site_name" content="Goolo">
+<meta property="og:description" content="使用神经网络识别手写数字">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566633086887.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566633130285.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566633376931.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566633814231.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566640830840.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566642420521.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566641479184.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566642730100.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566645346550.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566645953652.png">
+<meta property="og:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566645991151.png">
+<meta property="og:updated_time" content="2019-08-25T03:25:51.241Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="神经网络基础">
+<meta name="twitter:description" content="使用神经网络识别手写数字">
+<meta name="twitter:image" content="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/1566633086887.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>神经网络基础 | Goolo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Goolo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Goolo's Studio</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Goolo2/Goolo2.github.io/2019/08/24/神经网络基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Michael Don">
+      <meta itemprop="description" content="种豆子和相思或许都得瓜。">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Goolo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">神经网络基础
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-24 15:48:56" itemprop="dateCreated datePublished" datetime="2019-08-24T15:48:56+08:00">2019-08-24</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-25 11:25:51" itemprop="dateModified" datetime="2019-08-25T11:25:51+08:00">2019-08-25</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/《神经网络与深度学习》/" itemprop="url" rel="index"><span itemprop="name">《神经网络与深度学习》</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            <div class="post-description">使用神经网络识别手写数字</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="感知器"><a href="#感知器" class="headerlink" title="感知器"></a>感知器</h2><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p><img src="1566633086887.png" alt="1566633086887"><i class="img-caption">▲  测试</i></p>
+<p><img src="1566633130285.png" alt="1566633130285"></p>
+<p>权重实际上就是一种权衡。</p>
+<p>感知器的数学描述通过以下两步简化。</p>
+<ul>
+<li>$w\cdot x=\sum_jw_jx_j$</li>
+<li><strong>把阈值移到不等式的另一边，用感知器的偏置$b=-threshold$代替。</strong></li>
+</ul>
+<p>此时感知器的规则可以重写为</p>
+<p><img src="1566633376931.png" alt="1566633376931"></p>
+<h4 id="应用举例"><a href="#应用举例" class="headerlink" title="应用举例"></a>应用举例</h4><p>感知器可以用来计算简单的逻辑功能：通过构建与非门，而在多个与非门之上能构建出任何运算。</p>
+<p>例如，以下电路把$x_1$和$x_2$相加</p>
+<p><img src="1566633814231.png" alt="1566633814231"></p>
+<p>当输入为1,1时，carry bit为1，结果是$(10)_2$也就是十进制的2。</p>
+<p>从图中我们看到最左边的感知器的输出被两次作为底部感知器（carry bit）的输入。</p>
+<p>在感知器网络中，可以通过修改最左边感知器的输出到底部感知器的权重来表示两次输入。如下图，所有未标记的权重等于-2，所有偏置等于3.</p>
+<p><img src="1566640830840.png" alt="1566640830840"></p>
+<h2 id="S型神经元"><a href="#S型神经元" class="headerlink" title="S型神经元"></a>S型神经元</h2><h3 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h3><p>网络中单个感知器上一个权重或偏置的微小改动有时会引起感知器的输出完全翻转，如从0变到1。因此我们引入一种S型神经元，它的作用和感知器类似，但是权重和偏置的微小改动只引起输出的微小变化。</p>
+<p><strong>注意S型神经元与感知器的区别在于，它的输入可以是0-1的任意值，输出也不是局限于0和1。</strong>（可以看做阶跃函数的平滑版本）<br>$$<br>\sigma(z)=\frac{1}{1+e^{-z}}<br>$$<br>其中<br>$$<br>z=\sum_jw_jx_j-b<br>$$<br>σ 的平滑意味着权重和偏置的微小变化，即 ∆wj 和 ∆b，会从神经元产⽣⼀个微小的输出变化 ∆output 。</p>
+<p><img src="1566642420521.png" alt="1566642420521"></p>
+<p>只有$z=w\cdot x+b$取中间值时，它的行为与感知器模型有较大的偏离；在z时一个很大的正数时，输出接近1，在z是一个很大的负数时，输出接近0。</p>
+<p><img src="1566641479184.png" alt="1566641479184"></p>
+<h3 id="解释输出"><a href="#解释输出" class="headerlink" title="解释输出"></a>解释输出</h3><p>约定任何大于等于0.5的输出等同于感知器的输出“1”；小于0.5的输出等同于感知器的输出“0”。</p>
+<h2 id="神经网络的架构"><a href="#神经网络的架构" class="headerlink" title="神经网络的架构"></a>神经网络的架构</h2><blockquote>
+<p>前馈神经网络：以上一层的输出作为下一层的输入，没有回路，信息总是向前传播。</p>
+<p>递归神经网络：一个神经元的激活状态可以刺激其他神经元，使其随后被激活并保持一段有限时间。一个神经元的输出只在一段时间后而不是即刻影响它的输入，因此不会引起问题。</p>
+</blockquote>
+<p>结构上分为三部分</p>
+<ul>
+<li>输入层</li>
+<li>隐藏层</li>
+<li>输出层</li>
+</ul>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>假设我们尝试确定⼀张⼿写数字的图像上是否写的是“9”。很⾃然地，我们可以将图⽚像素的强度进⾏编码作为输⼊神经元来设计⽹络。<br>如果图像是⼀个 64 × 64 的灰度图像，那么我们会需要 4096 = 64 × 64 个输⼊神经元，每个强度取 0 和 1 之间合适的值。输出层只需要包含⼀个神经元，当输出值⼩于 0:5 时表⽰“输⼊图像不是⼀个 9”，⼤于 0:5 的值表⽰“输⼊图像是⼀个9” 。</p>
+<h3 id="识别手写数字"><a href="#识别手写数字" class="headerlink" title="识别手写数字"></a>识别手写数字</h3><p>我们将使⽤⼀个三层神经⽹络来识别单个数字 ，设定网络的输出层包含10个神经元，如果第⼀个神经元激活，即输出 ≈ 1，那么表明⽹络认为数字是⼀个 0。如果第⼆个神经元激活，就表明⽹络认为数字是⼀个 1 。</p>
+<p><img src="1566642730100.png" alt="1566642730100"></p>
+<p>为什么使用10个输出神经元而不用4个？</p>
+<p>如果我们有 4 个输出，那么第⼀个输出神经元将会尽⼒去判断数字的最⾼有效位是什么。把数字的最⾼有效位和数字的形状联系起来并不是⼀个简单的问题。 </p>
+<h2 id="梯度下降法学习"><a href="#梯度下降法学习" class="headerlink" title="梯度下降法学习"></a>梯度下降法学习</h2><p>对于MINIST数据集，把每个训练输⼊ x 看作⼀个 28 × 28 = 784维的向量。我们⽤ y = y(x) 表示对应的期望输出。</p>
+<p>这里y是一个10维的向量。假如有一个特定的画成6的训练图像，那么$y(x)=(0,0,0,0,0,1,0,0,0,0)^T$则是网络的期望输出。注意这里T是转置操作，把一个行向量转换成一个列向量。</p>
+<h3 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h3><p><img src="1566645346550.png" alt="1566645346550"></p>
+<p>这⾥ w 表⽰所有的⽹络中权重的集合， b 是所有的偏置， n 是训练输⼊数据的个数， a 是表示当输⼊为 x 时输出的向量，求和则是在总的训练输⼊ x 上进⾏的。 符号 ∥v∥ 是指向量 v 的模。 </p>
+<p>我们把C称为<strong>二次代价函数</strong>，有时也称为<strong>均方误差</strong>或者<strong>MSE</strong>。我们将采用梯度下降算法来找到能让代价函数尽可能小的权重和偏置。</p>
+<h4 id="为什么使用代价函数"><a href="#为什么使用代价函数" class="headerlink" title="为什么使用代价函数"></a>为什么使用代价函数</h4><p>为什么不直接最大化正确分类的图像数量，而是去最小化一个类似二次代价的间接评量？这么做是因为在神经⽹络中，被正确分类的图像数量所关于权重和偏置的函数并不是⼀个平滑的函数。⼤多数情况下，对权重和偏置做出的微⼩变动完全不会影响被正确分类的图像的数量。这会导致我们很难去解决如何改变权重和偏置来取得改进的性能。⽽⽤⼀个类似⼆次代价的平滑代价函数则能更好地去解决如何⽤权重和偏置中的微⼩的改变来取得更好的效果。 </p>
+<h3 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h3><p>为了最小化$c(v)$，想象C是一个只有两个变量$v_1$和$v_2$的函数（其实就是w和b），于是我们的目的就是设计一个能最小化C的算法。</p>
+<p><img src="1566645953652.png" alt="1566645953652"></p>
+<p>先让我们看一下，$v_1$和$v_2$变化一个微小的量后，C会怎么变化。根据微积分知识可得到：</p>
+<p><img src="1566645991151.png" alt="1566645991151"></p>
+<p>那么我们的目的就是怎么选取$\Delta v_1,\Delta v_2$使$\Delta C$为负。</p>
+<p>我们使用一种简明的记法：<br>$$<br>\Delta v \equiv (\Delta v_1,\Delta v_2)^T​<br>\\<br>\nabla C \equiv (\frac{\partial C}{\partial v_1},\frac{\partial C}{\partial v_2})^T<br>$$<br>其中，$\nabla C$称为梯度向量。</p>
+<p>于是，$\Delta C$的表达式可写为<br>$$<br>\Delta C \approx \nabla C \cdot \Delta v<br>$$<br>这样子，为了达到我们使$\Delta C$为负的目的，我们选取<br>$$<br>\Delta v=-\eta \nabla C<br>$$<br>这里$\eta$是个很小的正数，称为学习速率。</p>
+<p>那么有<br>$$<br>\Delta C \approx -\eta \nabla C \nabla C=-\eta ||\nabla C||^2<br>$$<br>也就是说，v的变化是<br>$$<br>v \implies v’=v-\eta \nabla C<br>$$<br>注意，关键是选择合适的$\eta$，使得$\Delta v$的变化不是太大或太小。</p>
+<p>综上，梯度下降法可以被视为一种在C下降最快的方向上做微小变化的方法。假设我们正在改变$\Delta v$来让C尽可能小，这相当于最小化$\Delta C \approx \nabla C \cdot \Delta v$。我们首先限制步长为小的固定值，即||||</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/神经网络/" rel="tag"># 神经网络</a>
+          
+            <a href="/tags/基础/" rel="tag"># 基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/24/反向传播/" rel="next" title="反向传播算法原理">
+                <i class="fa fa-chevron-left"></i> 反向传播算法原理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/25/passwordT/" rel="prev" title="passwordT">
+                passwordT <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Michael Don">
+            
+              <p class="site-author-name" itemprop="name">Michael Don</p>
+              <div class="site-description motion-element" itemprop="description">种豆子和相思或许都得瓜。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#感知器"><span class="nav-number">1.</span> <span class="nav-text">感知器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#描述"><span class="nav-number">1.0.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用举例"><span class="nav-number">1.0.2.</span> <span class="nav-text">应用举例</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#S型神经元"><span class="nav-number">2.</span> <span class="nav-text">S型神经元</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#形式"><span class="nav-number">2.1.</span> <span class="nav-text">形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释输出"><span class="nav-number">2.2.</span> <span class="nav-text">解释输出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络的架构"><span class="nav-number">3.</span> <span class="nav-text">神经网络的架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">3.1.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#识别手写数字"><span class="nav-number">3.2.</span> <span class="nav-text">识别手写数字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法学习"><span class="nav-number">4.</span> <span class="nav-text">梯度下降法学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代价函数"><span class="nav-number">4.1.</span> <span class="nav-text">代价函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么使用代价函数"><span class="nav-number">4.1.1.</span> <span class="nav-text">为什么使用代价函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降法"><span class="nav-number">4.2.</span> <span class="nav-text">梯度下降法</span></a></li></ol></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Michael Don</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
